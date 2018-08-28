@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "rpi - broswer",
+  "description": "",
+  "version": "1.0",
+  "content_scripts": [{
+    "matches": ["https://*.organizze.com.br/*"],
+    "css": ["organizze.css"],
+    "js": ["jquery-2.2.4.min.js", "organizze.js"]
+  }, {
+    "matches": ["https://trello.com/*"],
+    "css": ["trello.css"]
+  }],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "img/icon-on.png"
+  },
+  "permissions": [
+    "background",
+    "tabs"
+  ]
+}

@@ -1,0 +1,299 @@
+/*
+https://app.organizze.com.br/inicio
+https://app.organizze.com.br/a/cartoes-de-credito
+*/
+
+#user_account_widget_overview,
+#user_account_widget_fast_add,
+#user_account_widget_budgets,
+#user_account_widget_bills_to_receive,
+#user_account_widget_blog_feeds,
+#user_account_widget_top_expenses,
+.indication,
+.zze-layout_header,
+.zze-layout_footer,
+.box-header,
+.widget_box.accounts_overview .accounts-list li a span.image,
+.widget_box.accounts_overview .accounts-list li a span.description small,
+.widget_box.credit_cards_overview .cards-list li span.image,
+.widget_box.credit_cards_overview .cards-list li span.more,
+.widget_box .show-more,
+.widget_box.bills_to_pay .box-content .group-box table tbody tr td.first,
+.widget_box.bills_to_pay .box-content .group-box table tbody tr td.last {
+  display: none !important;
+}
+
+section.content {
+  margin-top: 0 !important;
+  padding: 15px !important;
+}
+
+.container-legacy {
+  width: 100% !important;
+}
+
+.widget_box.accounts_overview .accounts-list li a span.description big {
+  height: 35px !important;
+  line-height: 35px !important;
+}
+
+.widget_box.accounts_overview .accounts-list li {
+  width: 50% !important;
+  padding: 0 15px !important;
+  border: none !important;
+}
+
+ul.accounts-list,
+.widget_box.credit_cards_overview .cards-list {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+}
+
+.widget_box.accounts_overview .accounts-list li a {
+  padding: 0 !important;
+  border-bottom-color: rgba(255, 255, 255, 0.3) !important;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+}
+
+.widget_box.accounts_overview .accounts-list li a span.description {
+  padding: 0 !important;
+  margin: 0 !important;
+  flex: 1 !important;
+  vertical-align: middle !important;
+  overflow: hidden !important;
+  font-size: 16px !important;
+}
+
+.widget_box.credit_cards_overview .cards-list li {
+  width: 50% !important;
+  padding: 0 15px !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+.widget_box.credit_cards_overview .cards-list li span.info a {
+  font-size: 19px !important;
+  line-height: 19px !important;
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-bottom: 5px !important;
+}
+
+.widget_box.credit_cards_overview .cards-list li span.info {
+  margin: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1) !important;
+  padding-bottom: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+.widget_box.accounts_overview .accounts-list li a {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1) !important;
+}
+
+.widget_box.accounts_overview .accounts-list li a span.value {
+    font-size: 16px !important;
+    line-height: 35px !important;
+    height: 35px !important;
+}
+
+.group-box {
+  margin-bottom: 10px !important;
+}
+
+.group-box:last-child {
+  margin-bottom: 0 !important;
+}
+
+.widget_box.credit_cards_overview .cards-list,
+.widget_box .box .box-content {
+  margin-top: 0 !important;
+}
+
+@media only screen and (max-width: 1080px) {
+  .main-container .widget_box.bills_to_pay .box-content .group-box.today,
+  .group-box {
+    margin-bottom: 10px !important;
+  }
+
+  .group-box:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+.group-box a,
+.group-box small,
+.group-box .value {
+    color: #FFF !important;
+}
+
+.group-box td.description {
+    padding-left: 10px !important;
+}
+
+.group-box td {
+    border-bottom-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+#user_account_widget_bills_to_pay {
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+.widget_box.bills_to_pay .box-content .group-box .title-box {
+    background: rgba(0, 0, 0, 0.2) !important;
+}
+
+.widget_box.bills_to_pay .box-content .group-box .title-box h6 {
+    color: #FFF !important;
+    text-transform: uppercase !important;
+}
+
+.group-box.overdue {
+  background: #ff6969 !important;
+}
+
+.group-box.today {
+    background: #329dcc !important;
+}
+
+.group-box.upcoming {
+    background: #338057 !important;
+}
+
+.widget_box .show-more,
+div#user_account_widget_bills_to_pay {
+    box-shadow: none !important;
+}
+
+.main-container .widget_box:last-child {
+  margin-bottom: 0 !important;
+}
+
+@media only screen and (max-width: 1080px) {
+  body .container-legacy {
+    width: 100% !important;
+  }
+
+  section.content {
+    margin-top: 0 !important;
+  }
+
+  body.dashboard section.content {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+
+
+
+.add-new,
+.zze-header-content {
+  display: none !important;
+}
+
+.zze-layout_content {
+  margin: 0 !important;
+}
+
+ul.list-itens {
+  margin-left: -10px !important;
+  margin-right: -10px !important;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.zze-context_credit-cards-index .zze-box-content .zze-group-content .list-itens li.zze-item {
+  margin-top: 0 !important;
+  padding: 10px !important;
+}
+
+.zze-item {
+  width: 25% !important;
+}
+
+.zze-layout_content .container {
+  min-width: 100% !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+svg {
+  width: 100% !important;
+}
+
+.credit-card-container .info-bar .account-selected .account-details .name {
+  text-align: center !important;
+  padding: 10px;
+}
+
+.credit-card-container .info-bar,
+.credit-card-container .info-bar .account-selected,
+.credit-card-container .info-bar .account-selected .account-details {
+  float: none !important;
+  margin: 0 !important;
+}
+
+.amount-invoice {
+  text-align: right !important;
+  white-space: nowrap;
+}
+
+.simple-table thead,
+.situation,
+.empty,
+.amount-paid,
+.actions,
+.top-bar,
+.card-details,
+.drop-down,
+.info-bar .account-selected img,
+.zze-component_box-group-links,
+.zze-component_box-group-content,
+.zze-component_box-group-header .image,
+.zze-component_box-group-header .details,
+.zze-component_box-group-options,
+tr.paid {
+  display: none !important;
+}
+
+td.amount:after {
+  height: 15px !important;
+  display: inline-block !important;
+  color: #fff !important;
+  font-size: 9px !important;
+  line-height: 16px !important;
+  margin-top: -1px !important;
+  padding: 0 10px !important;
+  text-transform: uppercase !important;
+  -moz-border-radius: 8px !important;
+  -webkit-border-radius: 8px !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  position: relative !important;
+  -webkit-transition: all .15s ease-out 0s !important;
+  -moz-transition: all .15s ease-out 0s !important;
+  -o-transition: all .15s ease-out 0s !important;
+  transition: all .15s ease-out 0s !important;
+  margin-left: 5px !important;
+}
+
+.closed .amount:after {
+  background: #bdbdbf !important;
+  content: "Fechada" !important;
+}
+
+.current .amount:after {
+  background: #329dcc !important;
+  content: "Aberta" !important;
+}
+
+.zze-component_box-group {
+  padding: 5px !important;
+}

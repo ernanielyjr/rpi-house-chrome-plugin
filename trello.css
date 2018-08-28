@@ -1,0 +1,11 @@
+#header {
+  display: none;
+}
+
+.board-header {
+  display: none;
+}
+
+.board-canvas {
+  margin-top: 10px;
+}
