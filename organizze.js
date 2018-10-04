@@ -1,3 +1,5 @@
+/*
+// IMPROVE AND REMOVE COMMENT WRAPPER
 $("#user_account_widget_bills_to_pay").appendTo(".grid-sortable.ui-sortable.last");
 $("#user_account_widget_credit_cards_overview").appendTo(".grid-sortable.ui-sortable.first");
 
@@ -15,3 +17,4 @@ setTimeout(() => {
     });
   });
 }, 3000)
+ */

@@ -1,10 +1,20 @@
-var timer;
+let timer;
+let lastReloadDay = (new Date()).getDate();
 
 function nextTab() {
-  chrome.tabs.getAllInWindow(1, (tabs) => {
-    let count = tabs.length;
-    let lastIndex = count - 1;
+  chrome.tabs.getAllInWindow(null, (tabs) => {
+    const count = tabs.length;
+    const lastIndex = count - 1;
     let currentIndex = 0;
+
+    const currentDay = (new Date()).getDate();
+
+    if (currentDay !== lastReloadDay) {
+      for (let i = 0; i < count; i++) {
+        chrome.tabs.reload(tabs[i].id, { bypassCache: true });
+      }
+      lastReloadDay = currentDay;
+    }
 
     chrome.tabs.query({ highlighted: true }, (tabsResult) => {
       let tabResult = tabsResult[0] || {};
