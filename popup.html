@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .form-group {
+      display: flex;
+      align-items: center;
+      margin: 10px;
+    }
+
+    #INTERVAL {
+      width: 30px;
+      text-align: center;
+      margin: 0 5px;
+    }
+
+    #config {
+      padding: 10px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="form-group">
+    <input type="checkbox" id="ACTIVE" />
+    <label for="ACTIVE"">ACTIVE</label>
+  </div>
+
+  <div class="form-group">
+    <label for="INTERVAL">INTERVAL</label>
+    <input type="number" id="INTERVAL" />
+    <small>segundos</small>
+  </div>
+
+  <pre id="config"></pre>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>

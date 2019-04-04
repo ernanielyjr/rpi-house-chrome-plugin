@@ -1,4 +1,15 @@
-let timer;
+const CONFIG = {
+  ACTIVE: true,
+  INTERVAL: 10,
+};
+
+chrome.storage.onChanged.addListener((changes, namespace) => {
+  for (const key in changes) {
+    CONFIG[key] = changes[key].newValue;
+    console.log('CONFIG', CONFIG);
+  }
+});
+
 let lastReloadDay = (new Date()).getDate();
 
 function nextTab() {
@@ -18,34 +29,24 @@ function nextTab() {
 
     chrome.tabs.query({ highlighted: true }, (tabsResult) => {
       let tabResult = tabsResult[0] || {};
-      currentIndex = tabResult.index || 0;
 
-      let nextIndex = currentIndex + 1;
-      if (nextIndex > lastIndex) {
-        nextIndex = 0;
+      if (tabResult.url.indexOf('chrome://') === -1) {
+        currentIndex = tabResult.index || 0;
+        let nextIndex = currentIndex + 1;
+        if (nextIndex > lastIndex) {
+          nextIndex = 0;
+        }
+
+        chrome.tabs.update(tabs[nextIndex].id, { active: true });
       }
 
-      chrome.tabs.update(tabs[nextIndex].id, { active: true });
+      setTimeout(() => {
+        if (CONFIG.ACTIVE) {
+          nextTab();
+        }
+      }, CONFIG.INTERVAL * 1000);
     });
   });
 }
 
-function start() {
-  chrome.browserAction.setTitle({ title: 'Parar' });
-  chrome.browserAction.onClicked.addListener(stop);
-  chrome.browserAction.setIcon({ path : "img/icon-on.png" });
-
-  timer = setInterval(() => {
-    nextTab();
-  }, 5000);
-}
-
-function stop() {
-  chrome.browserAction.setTitle({ title: 'Começar' });
-  chrome.browserAction.onClicked.addListener(start);
-  chrome.browserAction.setIcon({ path : "img/icon-off.png" });
-
-  clearInterval(timer);
-}
-
-start();
+nextTab();

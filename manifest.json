@@ -1,24 +1,23 @@
 {
   "manifest_version": 2,
-  "name": "rpi - broswer",
+  "name": "rpi - browser",
   "description": "",
-  "version": "1.0",
+  "version": "1.1",
   "content_scripts": [{
-    "matches": ["https://*.organizze.com.br/*"],
-    "css": ["organizze.css"],
-    "js": ["jquery-2.2.4.min.js", "organizze.js"]
-  }, {
     "matches": ["https://trello.com/*"],
     "css": ["trello.css"]
   }],
+  "content_security_policy": "script-src 'self' *; object-src 'self'",
   "background": {
     "scripts": ["background.js"],
     "persistent": true
   },
   "browser_action": {
+    "default_popup": "popup.html",
     "default_icon": "img/icon-on.png"
   },
   "permissions": [
+    "storage",
     "background",
     "tabs"
   ]
